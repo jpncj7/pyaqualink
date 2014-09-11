@@ -45,11 +45,11 @@ class Pool(object):
         # equipment
         self.pump = Equipment("Pump", self.context, self)
         self.spa = Equipment("Spa", self.context, self)
-        self.aux1 = Equipment("Cleaner", self.context, self)
-        self.aux2 = Equipment("Blower", self.context, self)
-        self.aux3 = Equipment("Aux 3", self.context, self)
-        self.aux4 = Equipment("Pool Light", self.context, self)
-        self.aux5 = Equipment("Spa Light", self.context, self)
+        self.aux1 = Equipment("Pool Light", self.context, self)
+        self.aux2 = Equipment("Spa Light", self.context, self)
+        self.aux3 = Equipment("Landscape Light", self.context, self)
+        self.aux4 = Equipment("Aux 4", self.context, self)
+        self.aux5 = Equipment("Pool Fill", self.context, self)
         self.aux6 = Equipment("Aux 6", self.context, self)
         self.aux7 = Equipment("Aux 7", self.context, self)
         self.heater = Equipment("Heater", self.context, self)
@@ -69,9 +69,9 @@ class Pool(object):
         self.cleanMode = Mode("Clean Mode", self.context, self, 
                               [self.pump, self.aux1])
         self.spaMode = Mode("Spa Mode", self.context, self, 
-                            [self.spa, self.heater, self.aux4, self.aux5])
+                            [self.spa, self.heater, self.aux2])
         self.lightsMode = Mode("Lights Mode", self.context, self, 
-                              [self.aux4, self.aux5])
+                              [self.aux1, self.aux2, self.aux3])
 
         # restore state
         self.readState()

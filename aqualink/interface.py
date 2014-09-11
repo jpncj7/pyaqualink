@@ -109,7 +109,7 @@ class Interface(object):
         """ Debug raw serial data."""
         self.debugRawMsg += byte
         if len(self.debugRawMsg) == 16:
-            self.context.log(self.name, self.debugRawMsg).encode("hex")
+	    """ self.context.log(self.name, self.debugRawMsg).encode("hex") """
             self.debugRawMsg = ""
             
     def __del__(self):

@@ -216,12 +216,12 @@ class AllButtonPanel(Panel):
                     self.pool.setModel(msgParts[0], msgParts[2])
                     self.firstMsg = False
                     return
-                if msgParts[1] == "TEMP":
-                    if msgParts[0] == "POOL":
+                if msgParts[1] == "Temp":
+                    if msgParts[0] == "Pool":
                         self.pool.setPoolTemp(self.parseTemp(msgParts[2]))
-                    elif msgParts[0] == "SPA":
+                    elif msgParts[0] == "Spa":
                         self.pool.setSpaTemp(self.parseTemp(msgParts[2]))
-                    elif msgParts[0] == "AIR":
+                    elif msgParts[0] == "Air":
                         self.pool.setAirTemp(self.parseTemp(msgParts[2]))
                     return
                 dateParts = msgParts[0].split("/")

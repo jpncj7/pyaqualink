@@ -6,10 +6,10 @@ logFileName = "aqualink.log"
 debug = True                        # general debug messages
 debugData = False                   # show parsed aqualink messages
 debugRaw = False                    # show all raw RS485 data
-debugAck = True                     # show ack messages
-debugStatus = True                  # show status messages received from controller
-debugAction = True                  # show action messages sent to to controller
-debugMsg = False                    # show text messages received from controller
+debugAck = False                     # show ack messages
+debugStatus = False                  # show status messages received from controller
+debugAction = False                  # show action messages sent to to controller
+debugMsg = True                    # show text messages received from controller
 debugHttp = False
 debugWeb = False
 
