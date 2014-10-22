@@ -78,7 +78,7 @@ class Pool(object):
                
         # initiate interface and panels
         self.master = Panel("Master", self.context, self)
-        self.allButtonPanel = AllButtonPanel("All Button", self.context, self)
+        self.allButtonPanel = AllButtonPanel("AllButton", self.context, self)
         self.panels = {self.context.allButtonPanelAddr: self.allButtonPanel}
         self.panel = self.panels.values()[0]
         self.interface = Interface("RS485", self.context, self)
@@ -226,7 +226,7 @@ class Equipment(object):
 
     def changeState(self, newState, wait=False):
         # turns the equipment on or off
-        if self.context.debug: log(self.name, self.state, newState)
+        if self.context.debug: self.context.log(self.name, self.state, newState)
         if ((newState == Equipment.stateOn) and (self.state == Equipment.stateOff)) or\
            ((newState == Equipment.stateOff) and (self.state != Equipment.stateOff)):
             action = ActionThread(self.name+(" On" if newState else " Off"), 
